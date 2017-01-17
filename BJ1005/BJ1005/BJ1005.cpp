@@ -1,72 +1,41 @@
 #include <cstdio>
 #include <iostream>
-#include <queue>
+
 using namespace std;
 
+int dfs() {
+
+
+	return 0;
+}
+
 int main() {
-
-	int dp[1000];
+	int trial,numOfBuildings,numOfRules;
+	int *result;
 	int time[1000];
-	string phase[1000];
-	queue<int> q;
+	int from[10000];
+	int to[10000];
+	int start;
 
-	int trial;
 	cin >> trial;
-
-	while (trial > 0) {
-		int numOfBuilding=0,numOfRule;
-		cin >> numOfBuilding;
-		cin >> numOfRule;
-		int check = 1;
-		int from, to;
-		
-		for (int i = 0; i < numOfBuilding; i++) {
+	result = new int[trial];
+	
+	for (int i = 0; i < trial; i++) {
+		cin >> numOfBuildings >> numOfRules;
+		for (int j = 0; j < numOfBuildings; j++) {
 			cin >> time[i];
 		}
-
-		int phase = 1;
-
-		while (numOfRule > 0) {
-			cin >> from;
-			if (check == from) {
-				cin >> to;
-				q.push(to);
-				numOfRule--;
-			}
-			else {
-				check == from;
-				if (q.front == from) {
-
-				}
-			}
-
-
-
-
-
-
+		for (int j = 0; j < numOfRules; j++) {
+			cin >> from[j] >> to[j];
 		}
+		cin >> start;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		result[i] = dfs();
 	}
 
-
-
+	for (int i = 0; i < trial; i++) {
+		cout << result[i] << endl;
+	}
 
 
 }
