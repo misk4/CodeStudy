@@ -12,7 +12,9 @@ int dfs(int s,int numOfRules,int *to,int *from,int *time,int *dp ) {
 
 	for (int i = 0; i < numOfRules; i++) {
 		if (to[i] == s) {
+			
 			temp = dfs(from[i], numOfRules, to, from, time, dp);
+			
 			if (result < temp) {
 				result = temp;
 			}
@@ -23,7 +25,7 @@ int dfs(int s,int numOfRules,int *to,int *from,int *time,int *dp ) {
 	if (dp[s - 1] < result) {
 		dp[s - 1] = result;
 	}
-
+	
 	return result;
 }
 
@@ -38,11 +40,12 @@ int main() {
 
 	cin >> trial;
 	result = new int[trial];
+	result[0] = 1;
 	
 	for (int i = 0; i < trial; i++) {
 		cin >> numOfBuildings >> numOfRules;
 		for (int j = 0; j < numOfBuildings; j++) {
-			cin >> time[i];
+			cin >> time[j];
 		}
 		for (int j = 0; j < numOfRules; j++) {
 			cin >> from[j] >> to[j];
