@@ -2,6 +2,7 @@
 #include <iostream>
 
 using namespace std;
+int dfs(int, int, int *, int *, int *, int *);
 
 int dfs(int s,int numOfRules,int *to,int *from,int *time,int *dp ) {
 	int result = 0,temp;
@@ -34,13 +35,12 @@ int main() {
 	int *result;
 	int time[1000];
 	int dp[1000];
-	int from[10000];
-	int to[10000];
+	int from[100000];
+	int to[100000];
 	int start;
 
 	cin >> trial;
 	result = new int[trial];
-	result[0] = 1;
 	
 	for (int i = 0; i < trial; i++) {
 		cin >> numOfBuildings >> numOfRules;
@@ -52,7 +52,9 @@ int main() {
 		}
 		cin >> start;
 
-		fill_n(dp, 1000, -1);
+		for (int j = 0; j < 1000; j++) {
+			dp[j] = -1;
+		}
 
 		result[i] = dfs(start,numOfRules,to,from,time,dp);
 	}
