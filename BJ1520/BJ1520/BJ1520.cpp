@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int getPath(int **map, int **dp, int r, int c, int row[],int column[]) {
+int getPath(int **map, int **dp, int r, int c, int row[], int column[]) {
 
 	if (dp[r][c] != 0) {
 		return dp[r][c];
@@ -13,8 +13,8 @@ int getPath(int **map, int **dp, int r, int c, int row[],int column[]) {
 		return 1;
 
 	for (int i = 0; i < 4; i++) {
-		if (c+column[i] > 0 && c+ column[i] <= dp[0][1] && r+row[i]>0 && r+row[i] <= dp[0][0]&& map[r][c] > map[r+row[i]][c+column[i]]) {
-			dp[r][c] += getPath(map, dp, r + row[i], c + column[i],row,column);
+		if (c + column[i] > 0 && c + column[i] <= dp[0][1] && r + row[i]>0 && r + row[i] <= dp[0][0] && map[r][c] > map[r + row[i]][c + column[i]]) {
+			dp[r][c] += getPath(map, dp, r + row[i], c + column[i], row, column);
 		}
 	}
 
@@ -26,7 +26,7 @@ int main() {
 	int row[4] = { 0,0,-1,1 };
 	int column[4] = { -1,1,0,0 };
 
-	cin >> m >> n;
+	scanf("%d %d", &m, &n);
 	map = new int*[m + 1];
 	dp = new int*[m + 1];
 	for (int i = 0; i < m + 1; i++) {
@@ -42,15 +42,14 @@ int main() {
 
 	dp[0][0] = m;
 	dp[0][1] = n;
-	//cin >> dp[0][1] >> dp[0][0];
 
 	for (int i = 1; i < m + 1; i++) {
 		for (int j = 1; j < n + 1; j++) {
-			cin >> map[i][j];
+			scanf("%d", &map[i][j]);
 		}
 	}
 
-	cout << getPath(map, dp, 1, 1,row,column);
+	printf("%d", getPath(map, dp, 1, 1, row, column));
 
 	for (int i = 0; i < m + 1; i++) {
 		delete[] map[i];
