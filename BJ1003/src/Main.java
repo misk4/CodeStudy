@@ -15,7 +15,8 @@ public class Main {
 	
 	
 	public int fibo(int num){
-		if(num ==0 ){
+		
+		/*if(num ==0 ){
 			zero++;
 			return 0;
 		}if(num == 1 ){
@@ -29,7 +30,17 @@ public class Main {
 	
 		
 		
-		return fiboList.get(num);
+		return fiboList.get(num);*/
+		
+		if(num==0){
+			zero++;
+			return 0;
+		}else if(num==1){
+			one++;
+			return 1;
+		}else{
+			return fibo(num-1)+fibo(num-2);
+		}
 	}
 	
 	public void setToZero(){
@@ -58,9 +69,9 @@ public class Main {
 		
 		while(count > 0){
 			num = input.nextInt();
-			System.out.println(num);
+			
 			fibo.setArray(num);
-			System.out.println(fibo.fibo(num));
+			fibo.fibo(num);
 			fibo.printResult();
 			fibo.setToZero();
 			
