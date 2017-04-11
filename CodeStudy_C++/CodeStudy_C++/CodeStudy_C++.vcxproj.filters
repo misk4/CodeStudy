@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CG_2016_virus.cpp">
+    <ClCompile Include="CG_2016_freelancer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
