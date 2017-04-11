@@ -146,23 +146,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BJ1005.cpp" />
-    <ClCompile Include="BJ10828.cpp" />
-    <ClCompile Include="Bj10844.cpp" />
-    <ClCompile Include="BJ11066.cpp" />
-    <ClCompile Include="BJ1463.cpp" />
-    <ClCompile Include="BJ1520.cpp" />
-    <ClCompile Include="BJ1874.cpp" />
-    <ClCompile Include="BJ1912.cpp" />
-    <ClCompile Include="BJ1932.cpp" />
-    <ClCompile Include="BJ2156.cpp" />
-    <ClCompile Include="BJ2293.cpp" />
-    <ClCompile Include="BJ2751.cpp" />
-    <ClCompile Include="BJ2965.cpp" />
-    <ClCompile Include="BJ9251.cpp" />
-    <ClCompile Include="BJ9252.cpp" />
-    <ClCompile Include="BJ9461.cpp" />
-    <ClCompile Include="BJ9465.cpp" />
     <ClCompile Include="CG_2016_virus.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

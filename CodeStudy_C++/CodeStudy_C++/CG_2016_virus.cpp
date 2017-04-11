@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 	int **map;
 	bool *check;
 
-	int result=0;
+
 
 	scanf("%d", &T);	// Codeground 시스템에서는 C++에서도 scanf 함수 사용을 권장하며, cin을 사용하셔도 됩니다.
 	for (test_case = 1; test_case <= T; test_case++) {
@@ -27,6 +27,9 @@ int main(int argc, char** argv) {
 		for (i = 0; i <= n; i++) {
 			map[i] = new int[n+1];
 			check[i] = false;
+			for (j = 1; j <= n; j++) {
+				map[i][j] = 0;
+			}
 		}
 		
 		for (i = 0; i < m; i++) {
@@ -35,11 +38,12 @@ int main(int argc, char** argv) {
 		}
 
 		int V = n;
-		int count = 0;
+		
 
 		while (1) {
-			for (i = 1; i < n; i++) {
+			for (i = 1; i <=n; i++) {
 				if (check[i])continue;
+				int count = 0;
 				for (j = 1; j <= n; j++) count += map[i][j];
 				if (count<k || count > V - l - 1) {
 					V--;
@@ -49,12 +53,13 @@ int main(int argc, char** argv) {
 				}
 			}
 
-			if (i == n + 1) {
-				break;
-			}
+			if (i == n + 1) break;
+			
 
 
 		}
+		
+		int result = 0;
 
 		for (i = 1; i <= n; i++) {
 			if (check[i]) {
@@ -63,17 +68,20 @@ int main(int argc, char** argv) {
 		}
 		
 
-
 		printf("Case #%d\n", test_case);
 		printf("%d\n", result);
-
 
 		for (int i = 0; i < n; i++) {
 			delete[] map[i];
 		}
 		delete[] map;
 		delete[] check;
+		
+		
+		
 	}
+
+	
 
 	return 0;	// 정상종료 시 반드시 0을 리턴해야 합니다.
 }
