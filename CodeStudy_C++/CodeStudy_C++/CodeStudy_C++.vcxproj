@@ -163,6 +163,7 @@
     <ClCompile Include="BJ9252.cpp" />
     <ClCompile Include="BJ9461.cpp" />
     <ClCompile Include="BJ9465.cpp" />
+    <ClCompile Include="CG_2016_virus.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
