@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6C12BD97-725B-4E22-94CC-B9A8BB936E91}</ProjectGuid>
+    <ProjectGuid>{A3801C07-4E5C-4840-82E0-E9907D599D2A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BJ1932</RootNamespace>
+    <RootNamespace>CodeStudy_C</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,7 +146,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BJ1932.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
